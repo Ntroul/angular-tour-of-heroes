@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let r of herogroups">
+        <a routerLink="/group/{{r.hero_group_id}}">
+            {{r.hero_group_id}}
+            {{r.hero_group_name}}
+        </a>
+    </li>
+</ul>
+<button type="button"  routerLink="/group/create">Create a group</button>

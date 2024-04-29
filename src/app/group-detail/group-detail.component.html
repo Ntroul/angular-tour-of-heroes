@@ -1,0 +1,10 @@
+<div *ngIf="hero_group">
+    <h2>{{ hero_group.hero_group_name}} Details</h2>
+    <div *ngIf="hero_group.hero_group_id"><span>id: </span>{{hero_group.hero_group_id}}</div>
+    <div *ngIf="hero_group">
+      <label>Group name: </label>
+      <input type="text" [(ngModel)]="hero_group.hero_group_name" placeholder="group name" />
+    </div>  
+    <button type="button" (click)="save()">Save</button>
+    <button type="button" (click)="goBack()">Go back</button>
+</div>

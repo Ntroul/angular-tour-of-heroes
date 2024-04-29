@@ -1,0 +1,17 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div *ngIf="hero.id"><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+    <select  [(ngModel)]="hero.hero_type_id">
+      <option *ngFor="let herotype of hero_types" [value]="herotype.hero_type_id">{{herotype.hero_type_name}}</option>
+    </select>
+    <select  [(ngModel)]="hero.hero_group_id">
+      <option *ngFor="let herogroup of hero_group" [value]="herogroup.hero_group_id">{{herogroup.hero_group_name}}</option>
+    </select>
+    <input type="checkbox" id="hero-featured" [(ngModel)]="hero.featured" placeholder="Hero featured"/>
+  </div>
+  <button type="button" (click)="save()">Save</button>
+  <button type="button" (click)="goBack()">go back</button>
+</div>

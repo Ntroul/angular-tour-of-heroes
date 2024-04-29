@@ -1,0 +1,26 @@
+<table class="hero_table">
+  <tr class="sections">
+    <th>Name</th>
+    <th>Type</th>
+    <th>Group</th>
+    <th>Featured</th>
+
+  </tr>
+  <tr *ngFor="let hero of heroes">
+    <th>
+        <a routerLink="/heroes/{{hero.id}}">
+          <span>{{hero.id}}</span> {{hero.name}} 
+        </a>
+    </th>
+    <th>
+        <span> {{hero.hero_type_name}}</span>
+    </th>
+    <th>
+      <span>{{hero.hero_group_name}}</span>
+    </th>
+    <th>
+      <span>{{hero.featured}}</span>
+    </th>
+  </tr>
+</table>
+<button type="button" routerLink="/heroes/create" >Create a hero</button>

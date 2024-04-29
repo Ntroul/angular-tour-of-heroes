@@ -1,0 +1,28 @@
+<div class="search-hero-bar">
+  <h2>Search your hero</h2>
+  <input class="search-input" type="text" [(ngModel)]="searchQuery" (input)="applySearchFilter()" placeholder="Search heroes...">
+</div>
+<div>
+  <div *ngFor="let hero of filteredHeroes">
+    <a routerLink="/heroes/{{hero.id}}">
+      {{hero.name}}
+    </a>
+  </div>
+</div>
+<div class="featured-hero">
+  <h2>Featured Heroes:</h2>
+  <div>
+    <div *ngFor="let hero of featuredHeroes">
+      <a routerLink="/heroes/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </div>
+  </div>
+  <h2>Heroes: {{ heroCount?.heroCount }}</h2>
+  <h2>Hero Types: {{ HeroTypeCount?.HeroTypeCount }}</h2>
+  <h2>Hero Groups: {{ HeroGroupCount?.HeroGroupCount }}</h2>
+</div>
+
+
+
+

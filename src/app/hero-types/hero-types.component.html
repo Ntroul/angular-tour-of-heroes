@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let r of herotypes">
+        <a routerLink="/types/{{r.hero_type_id}}">
+            {{r.hero_type_id}}
+            {{r.hero_type_name}}
+        </a>
+    </li>
+</ul>
+<button type="button" routerLink="/types/create">Create a hero type</button>
+
